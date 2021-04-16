@@ -16,6 +16,7 @@ app.use(express.json())
 app.use('/', homeRoutes)
 app.use('/todos', todoRoutes)
  
-app.listen(process.env.PORT, ()=>{
+app.listen(process.env.PORT, ()=>{ 
+    //process.env.PORT is used to find the PORT number in .env file
     console.log('Server is running, you better catch it!')
 })    
