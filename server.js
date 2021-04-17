@@ -6,7 +6,7 @@ const todoRoutes = require('./routes/todos')
 
 require('dotenv').config({path: './config/.env'})
 
-connectDB()
+connectDB() //callback from connectDB function in the config/databse folder
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
