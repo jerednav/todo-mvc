@@ -7,6 +7,7 @@ module.exports = {
         try{
             const todoItems = await Todo.find()
             const itemsLeft = await Todo.countDocuments({completed: false})
+            //line 8 and 9 are talking to the database
             res.render('todos.ejs', {todos: todoItems, left: itemsLeft})
         }catch(err){
             console.log(err)
