@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const connectDB = require('./config/database')
+const connectDB = require('./config/database') //requiring database file
 const homeRoutes = require('./routes/home')
 const todoRoutes = require('./routes/todos')
 
