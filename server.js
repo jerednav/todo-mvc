@@ -16,7 +16,8 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.use('/', homeRoutes)
-app.use('/todos', todoRoutes)
+app.use('/todos', todoRoutes) 
+//heard todos in the browser, itll grab the routes in todoRoutes
  
 app.listen(process.env.PORT, ()=>{ 
     console.log('Server is running, you better catch it!')
