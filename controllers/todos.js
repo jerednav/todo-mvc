@@ -5,8 +5,10 @@ const Todo = require('../models/Todo')
 module.exports = {
     getTodos: async (req,res)=>{
         try{
-            const todoItems = await Todo.find()
+            const todoItems = await Todo.find() 
+            /*find all documents*/
             const itemsLeft = await Todo.countDocuments({completed: false})
+            //count all documents where completed is false
             //line 8 and 9 are talking to the database
             res.render('todos.ejs', {todos: todoItems, left: itemsLeft})
         }catch(err){
@@ -15,7 +17,9 @@ module.exports = {
     },
     createTodo: async (req, res)=>{
         try{
-            await Todo.create({todo: req.body.todoItem, completed: false})
+            await Todo.create({todo: req.body.todoItem, completed: false}) 
+            //create a new Todo using the model
+            //req.body.todoItem comes from the form input
             console.log('Todo has been added!')
             res.redirect('/todos')
         }catch(err){
