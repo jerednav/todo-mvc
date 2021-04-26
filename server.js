@@ -3,6 +3,8 @@ const app = express()
 const connectDB = require('./config/database') //requiring database file to run
 const homeRoutes = require('./routes/home')
 const todoRoutes = require('./routes/todos')
+//routes look at request and figure out which controller should be handling that request
+//routes see URL and hand off that request to a specific controller
 
 require('dotenv').config({path: './config/.env'})
 
