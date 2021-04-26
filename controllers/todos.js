@@ -1,5 +1,7 @@
 const Todo = require('../models/Todo')
 
+//5 methods that's talking to the model
+
 module.exports = {
     getTodos: async (req,res)=>{
         try{
